@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html ng-app="percyApp">
+<head>
+    <title>Percy Mukwenya | ASP.NET MVC Developer who builds world class applications</title>
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0," />
+    <meta name="author" content="" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <!--Styles-->
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/font-awesome.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="/favicon.png">
+    <!--Styles-->
+    <!--Scripts-->
+	
+<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBj28xOSAnIx8whyCs3HLbNaBBYESjPLNs",
+    authDomain: "portfolio-data.firebaseapp.com",
+    databaseURL: "https://portfolio-data.firebaseio.com",
+    storageBucket: "portfolio-data.appspot.com",
+  };
+  firebase.initializeApp(config);
+</script>
+    
+    <script src="js/modernizr-2.8.3.js"></script>
+    <script src="js/jquery-1.9.1.min.js"></script>
+    
+    <script type="text/javascript">
+        $(window).load(function() {
+	        $(".loader").fadeOut("slow");
+        })
+    </script>
+    <!--Scripts-->
+    
+</head>
+<body ng-controller="mainController">
+    <div class="loader"></div>
+    <header class="header-top">
+        <div class="container">
+            <div class="logo">
+                <a href="#/">
+                    <h4>
+                        <span><</span>percy<span>/></span>
+                    </h4>
+                </a>
+            </div>
+            <nav class="nav-top">
+                <ul>
+                    <li><a href="#/">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="clearfix"></div>
+        </div>
+    </header>
+
+    <div ng-view>
+
+    </div>
+    <footer class="footer-bottom">
+        <div class="container">
+            <p class="text-center">&copy; Percy Mukwenya 2016. All Rights Reserved</p>
+        </div>
+    </footer>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            /*
+            var defaults = {
+                containerID: 'toTop', // fading element id
+                containerHoverID: 'toTopHover', // fading element hover id
+                scrollSpeed: 1200,
+                easingType: 'linear'
+            };
+            */
+
+            $().UItoTop({ easingType: 'easeOutQuart' });
+
+        });
+    </script>
+    <script src="js/midnight.jquery.min.js"></script>
+    <script src="js/easing.js"></script>
+    <script src="js/move-top.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.min.js"></script>
+    <script src="js/app.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1200);
+            });
+            $('header.header-top').midnight();
+
+        });
+    </script>
+   
+    <a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+
+    
+</body>
+</html>
