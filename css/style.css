@@ -48,7 +48,7 @@ a {
     z-index: 1000;
     box-shadow: 0 1px 1px 0;
     width: 100%;
-    /*background: rgba(0,0,0,0.9)*/
+    /*background: rgba(0,0,0,0.9);*/
     background: none;
 }
 .logo
@@ -90,26 +90,26 @@ a {
 }
 .nav-top ul li a
 {
-    font-size: 1.3em;
+    font-size: 1.2em;
     font-family: Calibri;
     text-decoration: none;
-    color: #3399cc;
+    color: #3399cc !important;
     padding: 0.4em 1em;
     display: block;
 }
 .nav-top ul li a:hover,.nav-top ul li.active a
 {
-	color: #008080;
+	color: #008080 !important;
 }
 @media(max-width: 500px)
 {
  .nav-top ul li a
     {
-        font-size: 1em;
+        font-size: 1em !important;
         font-family: Calibri;
         text-decoration: none;
         color: #eee;
-        padding: 0.4em 0.6em;
+        padding: 0.4em 0.5em;
         display: block;
     }
     .logo h4
@@ -211,7 +211,7 @@ a {
 {
     border: 1px solid #3399cc;
     padding: 10px;
-    margin: 10px;
+    margin: 20px;
     text-decoration: none;
     color: #fff;
     background: none;
